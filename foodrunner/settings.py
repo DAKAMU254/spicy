@@ -24,9 +24,9 @@ ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
 IS_PRODUCTION = ENVIRONMENT == 'production'
 
 # Host configuration
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
-if IS_PRODUCTION and '*' in ALLOWED_HOSTS:
-    print("WARNING: Wildcard in ALLOWED_HOSTS in production is insecure", file=sys.stderr)
+ALLOWED_HOSTS = ['*']
+# if IS_PRODUCTION and '*' in ALLOWED_HOSTS:
+#     print("WARNING: Wildcard in ALLOWED_HOSTS in production is insecure", file=sys.stderr)
 
 # Application definition
 DJANGO_APPS = [
