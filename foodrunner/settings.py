@@ -98,26 +98,26 @@ WSGI_APPLICATION = 'foodrunner.wsgi.application'
 
 # Database configuration
 # Switch between SQLite for development and PostgreSQL for production
-if IS_PRODUCTION:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.getenv('DB_NAME', 'foodrunner'),
-            'USER': os.getenv('DB_USER', 'postgres'),
-            'PASSWORD': os.getenv('DB_PASSWORD', ''),
-            'HOST': os.getenv('DB_HOST', 'localhost'),
-            'PORT': os.getenv('DB_PORT', '5432'),
-            'CONN_MAX_AGE': 600,  # 10 minutes connection persistence
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-DATABASE_URL = os.getenv('DATABASE_URL')
+# if IS_PRODUCTION:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': os.getenv('DB_NAME', 'foodrunner'),
+#             'USER': os.getenv('DB_USER', 'postgres'),
+#             'PASSWORD': os.getenv('DB_PASSWORD', ''),
+#             'HOST': os.getenv('DB_HOST', 'localhost'),
+#             'PORT': os.getenv('DB_PORT', '5432'),
+#             'CONN_MAX_AGE': 600,  # 10 minutes connection persistence
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+DATABASE_URL = os.getenv('postgresql://kama_bm6q_user:chlYJUIDGuV7AySEjtS6tJc79DfjeYWL@dpg-cv3bdlbtq21c73bikamg-a/kama_bm6q')
 # Custom user model
 AUTH_USER_MODEL = 'core.User'
 
