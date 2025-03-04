@@ -416,3 +416,37 @@ def checkout_view(request):
         print("POST request received")
         print(request.POST)  # Print form data
         # Rest of your code
+@login_required
+def dashboard(request):
+    """Customer dashboard with quick links and order status"""
+    
+    # Get active orders
+    active_orders = Order.objects.filter(
+        customer=request.user,
+        status__in=['pending', 'confirmed', 'preparing', 'ready_for_pickup', 'out_for_delivery']
+    ).order_by('-created_at')[:5]
+    
+    # Get recent orders
+    recent_orders = Order.objects.filter(
+        customer=request.user,
+        status='delivered'
+    ).order_by('-created_at')[:5]
+    
+    # Get favorite restaurants (based on order history)
+    favorite_restaurants = Restaurant.objects.filter(
+        orders__customer=request.user
+    ).distinct().order_by('-average_rating')[:4]
+    
+    # If no favorites yet, show top rated restaurants
+    if not favorite_restaurants.exists():
+        favorite_restaurants = Restaurant.objects.filter(
+            is_active=True
+        ).order_by('-average_rating')[:4]
+    
+    context = {
+        'active_orders': active_orders,
+        'recent_orders': recent_orders,
+        'favorite_restaurants': favorite_restaurants,
+    }
+    
+    return render(request, 'customers/dashboard.html', context)       

@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import CustomUserCreationForm, CustomAuthenticationForm
 from .models import User
+from restaurants.models import Restaurant
+
 
 def landing_page(request):
     """Landing page view"""
@@ -69,3 +71,15 @@ def logout_view(request):
 def profile_view(request):
     """User profile view"""
     return render(request, 'profile.html')
+def landing_page(request):
+    """Landing page view"""
+    # Get featured restaurants (e.g., highest rated)
+    featured_restaurants = Restaurant.objects.filter(
+        is_active=True
+    ).order_by('-average_rating')[:3]
+    
+    context = {
+        'featured_restaurants': featured_restaurants,
+    }
+    
+    return render(request, 'landing.html', context)
