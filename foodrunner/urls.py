@@ -11,6 +11,7 @@ urlpatterns = [
     path('login/', core_views.login_view, name='login'),
     path('logout/', core_views.logout_view, name='logout'),
     path('profile/', core_views.profile_view, name='profile'),
+    path("__reload__/", include("django_browser_reload.urls")),
     
     # App URLs
     path('customer/', include(('customers.urls', 'customers'), namespace='customers')),
