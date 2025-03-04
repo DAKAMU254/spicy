@@ -117,7 +117,7 @@ WSGI_APPLICATION = 'foodrunner.wsgi.application'
 #             'NAME': BASE_DIR / 'db.sqlite3',
 #         }
 #     }
-DATABASE_URL = os.getenv('postgresql://kama_bm6q_user:chlYJUIDGuV7AySEjtS6tJc79DfjeYWL@dpg-cv3bdlbtq21c73bikamg-a/kama_bm6q')
+DATABASE_URL = os.getenv('postgresql://kama_bm6q_user:chlYJUIDGuV7AySEjtS6tJc79DfjeYWL@dpg-cv3bdlbtq21c73bikamg-a.oregon-postgres.render.com/kama_bm6q')
 # Custom user model
 AUTH_USER_MODEL = 'core.User'
 
