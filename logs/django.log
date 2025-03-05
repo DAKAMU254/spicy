@@ -190,3 +190,24 @@ WARNING 2025-03-04 17:11:56,419 basehttp 30008 25460 "GET /static/images/custome
 WARNING 2025-03-04 17:11:56,426 basehttp 30008 3936 "GET /static/images/customer1.jpg HTTP/1.1" 404 1920
 WARNING 2025-03-04 17:11:56,441 basehttp 30008 13072 "GET /static/images/app-mockup.png HTTP/1.1" 404 1923
 WARNING 2025-03-04 17:11:56,450 basehttp 30008 4804 "GET /static/images/customer3.jpg HTTP/1.1" 404 1920
+INFO 2025-03-05 14:04:59,574 autoreload 12092 123653564473472 Watching for file changes with StatReloader
+INFO 2025-03-05 14:05:53,525 basehttp 12092 123653438043840 "GET /customer/orders/2/ HTTP/1.1" 302 0
+INFO 2025-03-05 14:05:53,545 basehttp 12092 123653438043840 "GET /login/?next=/customer/orders/2/ HTTP/1.1" 200 7081
+INFO 2025-03-05 14:05:53,812 basehttp 12092 123653438043840 "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 304 0
+INFO 2025-03-05 14:05:57,409 basehttp 12092 123653428602560 "GET / HTTP/1.1" 200 17583
+INFO 2025-03-05 14:05:57,436 basehttp 12092 123653420209856 "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 304 0
+INFO 2025-03-05 14:05:57,445 basehttp 12092 123653428602560 "GET /static/js/main.js HTTP/1.1" 200 911
+INFO 2025-03-05 14:05:57,445 basehttp 12092 123653393983168 "GET /media/restaurant_banners/istockphoto-2184330237-612x612.jpg HTTP/1.1" 304 0
+INFO 2025-03-05 14:05:57,449 basehttp 12092 123653420209856 "GET /media/restaurant_banners/istockphoto-1428412216-612x612.jpg HTTP/1.1" 200 25034
+WARNING 2025-03-05 14:05:57,452 basehttp 12092 123653411817152 "GET /static/images/hero-food.png HTTP/1.1" 404 1920
+INFO 2025-03-05 14:05:57,453 basehttp 12092 123653403424448 "GET /media/restaurant_banners/istockphoto-857927726-612x612.jpg HTTP/1.1" 200 59456
+WARNING 2025-03-05 14:05:57,453 basehttp 12092 123653393983168 "GET /static/images/app-mockup.png HTTP/1.1" 404 1923
+WARNING 2025-03-05 14:05:57,469 basehttp 12092 123653403424448 "GET /static/images/customer1.jpg HTTP/1.1" 404 1920
+WARNING 2025-03-05 14:05:57,469 basehttp 12092 123653411817152 "GET /static/images/customer3.jpg HTTP/1.1" 404 1920
+WARNING 2025-03-05 14:05:57,469 basehttp 12092 123653393983168 "GET /static/images/customer2.jpg HTTP/1.1" 404 1920
+INFO 2025-03-05 14:05:57,721 basehttp 12092 123653420209856 "GET /static/images/logo.png HTTP/1.1" 304 0
+WARNING 2025-03-05 14:05:57,734 basehttp 12092 123653420209856 "GET /static/images/hero-food.png HTTP/1.1" 404 1920
+WARNING 2025-03-05 14:05:57,749 basehttp 12092 123653420209856 "GET /static/images/customer2.jpg HTTP/1.1" 404 1920
+WARNING 2025-03-05 14:05:57,750 basehttp 12092 123653428602560 "GET /static/images/app-mockup.png HTTP/1.1" 404 1923
+WARNING 2025-03-05 14:05:57,750 basehttp 12092 123653411817152 "GET /static/images/customer3.jpg HTTP/1.1" 404 1920
+WARNING 2025-03-05 14:05:57,750 basehttp 12092 123653393983168 "GET /static/images/customer1.jpg HTTP/1.1" 404 1920
